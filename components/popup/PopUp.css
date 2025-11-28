@@ -51,20 +51,67 @@
   color: var(--accent-blue);
 }
 
-.popup-content button {
-  background-color: var(--Blue-500);
-  color: var(--Neutral-5);
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  float: right;
-  font-weight: bold;
-  transition: background-color 0.2s;
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-stroke);
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.popup-content button:hover {
-  background-color: var(--Blue-400);
+.primary-btn {
+  background: linear-gradient(135deg, var(--Blue-500) 0%, var(--accent-blue) 100%);
+  color: var(--Neutral-5);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.5);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+.developer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.developer-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.developer-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--Blue-500);
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+.developer-info a:hover {
+  background-color: rgba(66, 133, 244, 0.2);
+  color: var(--Blue-400);
 }
 
 @media (max-width: 768px) {
@@ -100,11 +147,26 @@
     margin-right: 10px;
   }
 
-  .popup-content button {
+  .primary-btn {
     width: 100%;
-    float: none;
     margin-top: 10px;
     padding: 14px 20px;
     flex-shrink: 0; /* Prevent the button from shrinking */
+  }
+
+  .popup-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .developer-info {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .developer-info a {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -49,7 +49,15 @@ Plan a day trip using natural language and experience how Gemini leverages Googl
             </li>
           </ol>
         </div>
-        <button onClick={onClose}>Got It, Let's Plan!</button>
+        <div className="popup-footer">
+          <button className="primary-btn" onClick={onClose}>Got It, Let's Plan!</button>
+          <div className="developer-info">
+            <p>Developed by <strong>Ankit Kumar Gupta</strong></p>
+            <a href="https://github.com/ankit-kumar-guptaa" target="_blank" rel="noopener noreferrer">
+              <span className="icon">link</span> GitHub Profile
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
